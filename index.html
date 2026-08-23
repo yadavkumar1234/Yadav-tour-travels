@@ -1,231 +1,1426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yadav Tour & Travels | Chandigarh Taxi & Tours</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #17202a;
-      background: #fff;
-      line-height: 1.6;
-    }
+<title>Yadav Tour & Travels | Chandigarh Taxi & Tour Services</title>
 
-    header {
-      padding: 20px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-    }
+<meta name="description" content="Yadav Tour & Travels provides reliable taxi, airport transfer, outstation and tour services from Chandigarh across North India and nearby states. Available 24/7. Call or WhatsApp to plan your journey.">
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-    }
+<meta name="keywords" content="Chandigarh taxi service, Chandigarh taxi, Chandigarh tour and travels, Chandigarh airport taxi, Chandigarh outstation taxi, Chandigarh to Shimla taxi, Chandigarh to Manali taxi, North India taxi service">
 
-    .logo span {
-      color: #d88900;
-    }
+<meta name="theme-color" content="#101820">
 
-    .hero {
-      min-height: 70vh;
-      padding: 80px 7%;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, #f5f7fa, #e8eef5);
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .hero-content {
-      max-width: 700px;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .tag {
-      color: #d88900;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17202a;
+    background: #ffffff;
+    line-height: 1.6;
+}
 
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .hero p {
-      font-size: 19px;
-      color: #58636f;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
+img {
+    max-width: 100%;
+    display: block;
+}
 
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+/* NAVIGATION */
 
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eeeeee;
+}
 
-    .primary {
-      background: #17202a;
-      color: white;
-    }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 17px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .secondary {
-      border: 1px solid #17202a;
-      color: #17202a;
-    }
+.logo {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
 
-    section {
-      padding: 70px 7%;
-    }
+.logo span {
+    color: #d88b20;
+}
 
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 35px;
+.nav-links {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #d88b20;
+}
+
+.nav-button {
+    background: #101820;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 7px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 690px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(100deg, rgba(8,17,25,.96) 0%, rgba(8,17,25,.82) 42%, rgba(8,17,25,.25) 100%),
+        linear-gradient(135deg, #263746, #78909c);
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 75% 30%, rgba(216,139,32,.22), transparent 32%),
+        linear-gradient(180deg, transparent 65%, rgba(0,0,0,.35));
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 90px 25px;
+    color: white;
+}
+
+.hero-label {
+    color: #f1b24b;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 7vw, 78px);
+    line-height: 1.02;
+    max-width: 760px;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f1b24b;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 19px;
+    color: #e2e7ea;
+    margin-bottom: 34px;
+}
+
+.buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #d88b20;
+    color: white;
+}
+
+.btn-dark {
+    background: white;
+    color: #101820;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.45);
+    color: white;
+}
+
+/* TRUST BAR */
+
+.trust-bar {
+    background: #101820;
+    color: white;
+}
+
+.trust-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.trust-item {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.trust-item span {
+    color: #f1b24b;
+    display: block;
+    font-size: 23px;
+    margin-bottom: 3px;
+}
+
+/* GENERAL */
+
+section {
+    padding: 90px 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-label {
+    color: #d88b20;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.section-intro {
+    color: #68727c;
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 42px;
+}
+
+/* SERVICES */
+
+.services {
+    background: #f7f8f9;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 30px 25px;
+    transition: .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(16,24,32,.09);
+}
+
+.card-icon {
+    font-size: 31px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.card p {
+    color: #69737d;
+    font-size: 15px;
+}
+
+/* DESTINATIONS */
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination {
+    min-height: 220px;
+    border-radius: 17px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #718692, #273b48);
+    transition: .3s ease;
+}
+
+.destination:nth-child(2) {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #81949c, #334b55);
+}
+
+.destination:nth-child(3) {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #9a8c76, #3e403a);
+}
+
+.destination:nth-child(4) {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #7e9191, #35494d);
+}
+
+.destination:nth-child(5) {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #8c9a83, #344334);
+}
+
+.destination:nth-child(6) {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.82)),
+        linear-gradient(135deg, #958c82, #403a34);
+}
+
+.destination:hover {
+    transform: translateY(-5px);
+}
+
+.destination-content {
+    position: relative;
+    z-index: 2;
+}
+
+.destination h3 {
+    font-size: 26px;
+    margin-bottom: 3px;
+}
+
+.destination p {
+    color: #e1e5e7;
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #101820;
+    color: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about .section-intro {
+    color: #b9c2c8;
+}
+
+.about-box {
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.05);
+    padding: 34px;
+    border-radius: 18px;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.about-list li:last-child {
+    border-bottom: none;
+}
+
+.about-list span {
+    color: #f1b24b;
+    margin-right: 10px;
+}
+
+/* PACKAGES */
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.package {
+    border-radius: 17px;
+    padding: 30px;
+    background: #f7f8f9;
+    border: 1px solid #e7eaed;
+}
+
+.package h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.package p {
+    color: #68727c;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.package-link {
+    color: #d88b20;
+    font-weight: 800;
+}
+
+/* WHY US */
+
+.why {
+    background: #f7f8f9;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid #e8eaec;
+}
+
+.why-card h3 {
+    margin: 12px 0 7px;
+}
+
+.why-card p {
+    color: #68727c;
+    font-size: 15px;
+}
+
+/* FAQ */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+details {
+    border: 1px solid #e5e8eb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: white;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+details p {
+    color: #68727c;
+    margin-top: 12px;
+}
+
+/* CTA */
+
+.cta {
+    background:
+        linear-gradient(120deg, #101820, #263a47);
+    color: white;
+    text-align: center;
+}
+
+.cta .section-title {
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.cta p {
+    color: #c8d0d5;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f7f8f9;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    background: white;
+    padding: 32px;
+    border-radius: 17px;
+    border: 1px solid #e8eaec;
+}
+
+.contact-row {
+    display: flex;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.contact-row:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    font-size: 24px;
+}
+
+.contact-row strong {
+    display: block;
+}
+
+.contact-row p {
+    color: #68727c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1116;
+    color: #aeb8be;
+    padding: 35px 25px 85px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    color: white;
+    font-weight: 800;
+}
+
+.footer-brand span {
+    color: #d88b20;
+}
+
+/* MOBILE BOOKING BAR */
+
+.mobile-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background: white;
+    box-shadow: 0 -5px 25px rgba(0,0,0,.15);
+    padding: 9px;
+    gap: 8px;
+}
+
+.mobile-bar a {
+    flex: 1;
+    padding: 13px 7px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.mobile-whatsapp {
+    background: #1f9d55;
+    color: white;
+}
+
+.mobile-call {
+    background: #101820;
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card {
-      padding: 28px;
-      border: 1px solid #eee;
-      border-radius: 15px;
-      background: white;
-      box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .package-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .card p {
-      color: #68727d;
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .cta {
-      text-align: center;
-      background: #17202a;
-      color: white;
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
-    .cta p {
-      margin: 15px auto 25px;
-      max-width: 600px;
-      color: #cbd2d9;
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        position: sticky;
+    }
+
+    .navbar {
+        padding: 15px 18px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .trust-inner {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .cards,
+    .destinations-grid,
+    .package-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination {
+        min-height: 190px;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .mobile-bar {
+        display: flex;
     }
 
     footer {
-      padding: 25px 7%;
-      text-align: center;
-      color: #777;
-      font-size: 14px;
+        padding-bottom: 90px;
     }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 18px 5%;
-      }
-
-      .hero {
-        padding: 60px 5%;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Yadav <span>Tour & Travels</span></div>
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            Yadav <span>Tour & Travels</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#tours">Tours</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20enquire%20about%20a%20taxi%20or%20tour." class="nav-button">
+                WhatsApp
+            </a>
+        </div>
+
+    </nav>
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
-  <div class="hero-content">
-    <div class="tag">CHANDIGARH • TAXI • TOURS • TRAVELS</div>
 
-    <h1>Your Journey.<br>Our Priority.</h1>
+    <div class="hero-content">
 
-    <p>
-      Reliable taxi and tour services from Chandigarh
-      to Himachal Pradesh, Punjab and beyond.
-    </p>
+        <div class="hero-label">
+            Chandigarh • North India • 24/7
+        </div>
 
-    <div class="buttons">
-      <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20enquire%20about%20a%20taxi%20or%20tour." class="btn primary">WhatsApp Now</a>
-      <a href="#services" class="btn secondary">Explore Services</a>
+        <h1>
+            Your Journey.<br>
+            <span>Our Priority.</span>
+        </h1>
+
+        <p class="hero-description">
+            Reliable taxi, travel and tour services from Chandigarh
+            for local journeys, airport transfers, outstation travel
+            and memorable trips across North India.
+        </p>
+
+        <div class="buttons">
+
+            <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20plan%20a%20taxi%20or%20tour." class="btn btn-primary">
+                💬 WhatsApp Now
+            </a>
+
+            <a href="tel:+919328656258" class="btn btn-dark">
+                📞 Call Now
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Services
+            </a>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<section id="services">
-  <h2 class="section-title">Our Services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>🚕 Local Taxi</h3>
-      <p>Comfortable taxi service around Chandigarh and nearby areas.</p>
+<!-- TRUST BAR -->
+
+<div class="trust-bar">
+
+    <div class="trust-inner">
+
+        <div class="trust-item">
+            <span>24/7</span>
+            Available for enquiries
+        </div>
+
+        <div class="trust-item">
+            <span>📍</span>
+            Chandigarh & Tricity
+        </div>
+
+        <div class="trust-item">
+            <span>🛣️</span>
+            North India Travel
+        </div>
+
     </div>
 
-    <div class="card">
-      <h3>✈️ Airport Transfers</h3>
-      <p>Reliable pickup and drop-off for your airport journeys.</p>
+</div>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-label">
+            What We Do
+        </div>
+
+        <h2 class="section-title">
+            Travel made simple.
+        </h2>
+
+        <p class="section-intro">
+            Whether you need a quick local ride or are planning a
+            multi-day journey, Yadav Tour & Travels is here to help
+            you plan your trip comfortably and conveniently.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🚕</div>
+                <h3>Local Taxi</h3>
+                <p>
+                    Convenient taxi services across Chandigarh,
+                    Mohali and Panchkula.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">✈️</div>
+                <h3>Airport Transfers</h3>
+                <p>
+                    Convenient pickup and drop-off services for
+                    your airport journeys.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛣️</div>
+                <h3>Outstation Taxi</h3>
+                <p>
+                    Plan one-way or round-trip journeys to destinations
+                    across North India and nearby states.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏔️</div>
+                <h3>Tour Packages</h3>
+                <p>
+                    Plan complete leisure trips and explore beautiful
+                    destinations with a travel plan suited to you.
+                </p>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="card">
-      <h3>🏔️ Himachal Tours</h3>
-      <p>Explore Shimla, Manali, Kasol, Dharamshala and more.</p>
-    </div>
-
-    <div class="card">
-      <h3>🛣️ Outstation Taxi</h3>
-      <p>Comfortable one-way and round-trip travel across North India.</p>
-    </div>
-  </div>
 </section>
+
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+    <div class="container">
+
+        <div class="section-label">
+            Explore North India
+        </div>
+
+        <h2 class="section-title">
+            Where will you go next?
+        </h2>
+
+        <p class="section-intro">
+            From Himalayan escapes to historic cities, plan your
+            next journey from Chandigarh with Yadav Tour & Travels.
+        </p>
+
+        <div class="destinations-grid">
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Shimla</h3>
+                    <p>Mountain views • Leisure • Family trips</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Manali</h3>
+                    <p>Mountains • Adventure • Holidays</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Kasol</h3>
+                    <p>Himalayan escape • Nature • Travel</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Dharamshala</h3>
+                    <p>Mountains • Culture • Relaxation</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Amritsar</h3>
+                    <p>Heritage • Culture • City travel</p>
+                </div>
+            </div>
+
+            <div class="destination">
+                <div class="destination-content">
+                    <h3>Kasauli</h3>
+                    <p>Peaceful hills • Weekend escapes</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="section-label">
+                    About Yadav Tour & Travels
+                </div>
+
+                <h2 class="section-title">
+                    Travel with confidence.
+                </h2>
+
+                <p class="section-intro">
+                    Based in Chandigarh, Yadav Tour & Travels is focused
+                    on making your journey straightforward, comfortable
+                    and dependable.
+                </p>
+
+                <p class="section-intro">
+                    Whether you're travelling for work, visiting family,
+                    heading to the mountains or planning a holiday,
+                    we're here to help you arrange your journey from
+                    Chandigarh and across North India.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <ul class="about-list">
+
+                    <li>
+                        <span>✓</span>
+                        Local and outstation travel
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        One-way and round-trip journeys
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Airport pickup and drop-off
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Tour and travel planning
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Chandigarh, Mohali & Panchkula
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Available for enquiries 24/7
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TOUR PACKAGES -->
+
+<section id="tours">
+
+    <div class="container">
+
+        <div class="section-label">
+            Plan Your Trip
+        </div>
+
+        <h2 class="section-title">
+            More than just a ride.
+        </h2>
+
+        <p class="section-intro">
+            Tell us where you want to go, when you want to travel
+            and how many people are travelling. We'll help you plan
+            the journey.
+        </p>
+
+        <div class="package-grid">
+
+            <div class="package">
+
+                <h3>🏔️ Himachal Getaways</h3>
+
+                <p>
+                    Plan a relaxing or adventurous trip to destinations
+                    including Shimla, Manali, Kasol, Dharamshala and
+                    other Himalayan destinations.
+                </p>
+
+                <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20want%20to%20plan%20a%20Himachal%20trip." class="package-link">
+                    Plan a Himachal Trip →
+                </a>
+
+            </div>
+
+            <div class="package">
+
+                <h3>✈️ Airport Travel</h3>
+
+                <p>
+                    Need a ride to or from the airport? Contact us
+                    with your pickup location, travel date and flight
+                    timing to plan your transfer.
+                </p>
+
+                <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20need%20an%20airport%20transfer." class="package-link">
+                    Enquire About Airport Taxi →
+                </a>
+
+            </div>
+
+            <div class="package">
+
+                <h3>🛣️ Outstation Journeys</h3>
+
+                <p>
+                    Planning a trip outside Chandigarh? Choose a
+                    one-way or round-trip journey and tell us your
+                    destination.
+                </p>
+
+                <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20want%20to%20enquire%20about%20an%20outstation%20taxi." class="package-link">
+                    Plan an Outstation Trip →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-label">
+            Why Choose Us
+        </div>
+
+        <h2 class="section-title">
+            A simpler way to travel.
+        </h2>
+
+        <p class="section-intro">
+            We believe arranging your journey should be simple.
+            Tell us what you need and we'll help you figure out
+            the travel details.
+        </p>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="card-icon">🤝</div>
+                <h3>Personal Service</h3>
+                <p>
+                    Speak directly with us about your journey instead
+                    of dealing with a complicated booking process.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="card-icon">🧭</div>
+                <h3>Travel Planning</h3>
+                <p>
+                    From local rides to multi-day tours, we'll help
+                    you plan the journey around your requirements.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="card-icon">⏰</div>
+                <h3>24/7 Enquiries</h3>
+                <p>
+                    Have a question about your journey? We're available
+                    for travel enquiries around the clock.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
 
 <section>
-  <h2 class="section-title">Popular Destinations</h2>
 
-  <div class="cards">
-    <div class="card"><h3>Shimla</h3><p>Mountain escapes from Chandigarh.</p></div>
-    <div class="card"><h3>Manali</h3><p>Comfortable trips to the mountains.</p></div>
-    <div class="card"><h3>Kasol</h3><p>Plan your perfect Himachal getaway.</p></div>
-    <div class="card"><h3>Dharamshala</h3><p>Explore the beauty of Himachal.</p></div>
-  </div>
+    <div class="container">
+
+        <div class="section-label">
+            Frequently Asked Questions
+        </div>
+
+        <h2 class="section-title">
+            Have a question?
+        </h2>
+
+        <p class="section-intro">
+            Here are some common questions. If you need something
+            specific, simply WhatsApp us.
+        </p>
+
+        <div class="faq-grid">
+
+            <details>
+                <summary>Do you provide one-way taxi services?</summary>
+                <p>
+                    Yes. One-way outstation journeys are available.
+                    Contact us with your pickup location and destination
+                    for details.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do you provide round-trip taxi services?</summary>
+                <p>
+                    Yes. We can help arrange round-trip journeys
+                    according to your travel plans.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do you provide airport transfers?</summary>
+                <p>
+                    Yes. Contact us with your airport, pickup/drop-off
+                    location and travel details.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can you help plan a complete tour?</summary>
+                <p>
+                    Yes. Tell us your destination, dates and approximate
+                    travel requirements and we'll help you plan the trip.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do you provide services outside Chandigarh?</summary>
+                <p>
+                    Yes. We provide outstation travel across North India
+                    and nearby states.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I book a taxi?</summary>
+                <p>
+                    The easiest way is to WhatsApp or call us directly.
+                    Tell us your pickup location, destination, date and
+                    number of passengers.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="cta" id="contact">
-  <h2>Ready to Plan Your Trip?</h2>
-  <p>Contact Yadav Tour & Travels for your next taxi or tour from Chandigarh.</p>
 
-  <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20book%20a%20taxi%20or%20tour." class="btn secondary" style="background:white;">
-    WhatsApp Us
-</a>
-  </a>
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Your next journey starts here.
+        </h2>
+
+        <p>
+            Tell us where you're going and we'll help you plan your
+            taxi or tour from Chandigarh.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20plan%20a%20journey." class="btn btn-primary">
+                💬 WhatsApp Us
+            </a>
+
+            <a href="tel:+919328656258" class="btn btn-dark">
+                📞 Call Us
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-label">
+            Contact
+        </div>
+
+        <h2 class="section-title">
+            Let's plan your journey.
+        </h2>
+
+        <p class="section-intro">
+            Send us your travel details and we'll get back to you.
+        </p>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">📞</div>
+
+                    <div>
+                        <strong>Call Us</strong>
+                        <p>
+                            <a href="tel:+919328656258">
+                                +91 93286 56258
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">💬</div>
+
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p>
+                            <a href="https://wa.me/919328656258">
+                                Message us on WhatsApp
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">✉️</div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <p>
+                            <a href="mailto:yadavtravels.chd@gmail.com">
+                                yadavtravels.chd@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">📍</div>
+
+                    <div>
+                        <strong>Service Area</strong>
+                        <p>
+                            Chandigarh • Mohali • Panchkula •
+                            North India & nearby states
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3 style="font-size:25px; margin-bottom:12px;">
+                    What to send us
+                </h3>
+
+                <p style="color:#68727c; margin-bottom:20px;">
+                    For a faster response, include these details
+                    in your WhatsApp message:
+                </p>
+
+                <ul style="list-style:none; color:#4e5962;">
+
+                    <li style="padding:9px 0;">✓ Pickup location</li>
+                    <li style="padding:9px 0;">✓ Destination</li>
+                    <li style="padding:9px 0;">✓ Travel date</li>
+                    <li style="padding:9px 0;">✓ Number of passengers</li>
+                    <li style="padding:9px 0;">✓ One-way or round trip</li>
+                    <li style="padding:9px 0;">✓ Any special requirements</li>
+
+                </ul>
+
+                <br>
+
+                <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels.%0A%0APickup%3A%0ADestination%3A%0ATravel%20date%3A%0APassengers%3A%0AOne-way%20or%20round%20trip%3A%0A%0APlease%20help%20me%20plan%20my%20journey." class="btn btn-primary">
+                    Start a WhatsApp Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-  © 2026 Yadav Tour & Travels • Chandigarh
+
+    <div class="footer-inner">
+
+        <div>
+            <div class="footer-brand">
+                Yadav <span>Tour & Travels</span>
+            </div>
+
+            <div style="margin-top:7px;">
+                Taxi • Tours • Travels • Chandigarh
+            </div>
+        </div>
+
+        <div>
+            © 2026 Yadav Tour & Travels. All rights reserved.
+        </div>
+
+    </div>
+
 </footer>
+
+
+<!-- MOBILE BOOKING BAR -->
+
+<div class="mobile-bar">
+
+    <a href="tel:+919328656258" class="mobile-call">
+        📞 Call Now
+    </a>
+
+    <a href="https://wa.me/919328656258?text=Hello%20Yadav%20Tour%20%26%20Travels%2C%20I%20would%20like%20to%20enquire%20about%20a%20taxi%20or%20tour." class="mobile-whatsapp">
+        💬 WhatsApp
+    </a>
+
+</div>
 
 </body>
 </html>
