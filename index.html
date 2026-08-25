@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Yadav Tour & Travels — reliable taxi, airport transfer, outstation and tour services from Chandigarh across North India.">
+content="Yadav Tour & Travels — reliable taxi, airport transfers, outstation trips and North India tours from Chandigarh.">
 
 <meta name="theme-color" content="#071a2b">
 
@@ -17,13 +17,14 @@ content="Yadav Tour & Travels — reliable taxi, airport transfer, outstation an
   --navy:#071a2b;
   --navy2:#0c263c;
   --gold:#f5b82e;
-  --gold2:#d99a16;
-  --green:#20a457;
+  --gold2:#ffcf63;
+  --green:#19a957;
   --ink:#102033;
   --muted:#64748b;
   --soft:#f5f8fb;
   --white:#ffffff;
-  --shadow:0 16px 40px rgba(7,26,43,.10);
+  --line:#e6ebf0;
+  --shadow:0 18px 50px rgba(7,26,43,.12);
   --radius:22px;
 }
 
@@ -50,14 +51,48 @@ a{
   color:inherit;
 }
 
-img{
-  max-width:100%;
-  display:block;
+button{
+  font:inherit;
 }
 
 .container{
   width:min(1180px,92%);
   margin:auto;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+  background:#04121f;
+  color:#dce7ef;
+  font-size:12px;
+}
+
+.topbar .container{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.top-items{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.top-items span{
+  display:flex;
+  gap:7px;
+  align-items:center;
+}
+
+.gold{
+  color:var(--gold);
 }
 
 
@@ -68,9 +103,9 @@ img{
 header{
   position:sticky;
   top:0;
-  z-index:50;
-  background:rgba(7,26,43,.96);
-  backdrop-filter:blur(12px);
+  z-index:100;
+  background:rgba(7,26,43,.97);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
@@ -90,37 +125,38 @@ header{
 }
 
 .logo{
-  width:52px;
-  height:52px;
+  width:54px;
+  height:54px;
   border:2px solid var(--gold);
   border-radius:50%;
   display:grid;
   place-items:center;
-  font-size:26px;
+  font-size:28px;
   background:linear-gradient(145deg,#163a56,#071a2b);
+  box-shadow:0 0 0 4px rgba(245,184,46,.08);
 }
 
 .brand strong{
   font-family:Georgia,serif;
   color:var(--gold);
-  font-size:24px;
+  font-size:23px;
   line-height:1.05;
 }
 
 .brand small{
   display:block;
   color:#dce6ee;
-  font-size:12px;
-  margin-top:2px;
+  font-size:11px;
+  margin-top:3px;
 }
 
 .navlinks{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:27px;
   color:#f7fafc;
   font-size:14px;
-  font-weight:600;
+  font-weight:700;
 }
 
 .navlinks a{
@@ -136,23 +172,24 @@ header{
 .navlinks a.active:after{
   content:"";
   position:absolute;
-  bottom:20px;
   left:0;
   right:0;
+  bottom:19px;
   height:3px;
   background:var(--gold);
-  border-radius:3px;
+  border-radius:4px;
 }
 
-.nav-actions{
+.nav-cta{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
 }
 
-.call-mini{
-  color:var(--gold);
-  font-size:24px;
+.phone-mini{
+  color:#fff;
+  font-weight:800;
+  font-size:13px;
 }
 
 .btn{
@@ -161,28 +198,26 @@ header{
   justify-content:center;
   gap:9px;
   border:0;
-  border-radius:9px;
-  padding:13px 22px;
-  font-weight:800;
-  font-size:15px;
+  border-radius:10px;
+  padding:13px 21px;
+  font-weight:850;
+  font-size:14px;
   cursor:pointer;
-  transition:.2s;
+  transition:.22s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn-gold{
   background:var(--gold);
   color:#071a2b;
+  box-shadow:0 9px 22px rgba(245,184,46,.2);
 }
 
 .btn-gold:hover{
-  background:#ffc94c;
-  transform:translateY(-2px);
-}
-
-.btn-outline{
-  background:transparent;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.65);
+  background:var(--gold2);
 }
 
 .btn-green{
@@ -190,13 +225,19 @@ header{
   color:#fff;
 }
 
+.btn-outline{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.55);
+}
+
 .mobile-menu{
   display:none;
-  background:none;
+  background:transparent;
   border:1px solid rgba(255,255,255,.3);
   color:#fff;
-  border-radius:8px;
-  padding:8px 10px;
+  border-radius:10px;
+  padding:9px 12px;
   font-size:22px;
 }
 
@@ -206,55 +247,56 @@ header{
 ========================= */
 
 .hero{
-  min-height:610px;
+  min-height:680px;
   position:relative;
   color:#fff;
 
   background:
   linear-gradient(
     90deg,
-    rgba(4,17,28,.94) 0%,
-    rgba(4,17,28,.78) 43%,
-    rgba(4,17,28,.30) 100%
+    rgba(3,15,25,.96) 0%,
+    rgba(3,15,25,.83) 42%,
+    rgba(3,15,25,.28) 100%
   ),
-  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85")
+  url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=88")
   center/cover;
 }
 
 .hero-inner{
-  min-height:610px;
+  min-height:680px;
   display:flex;
   align-items:center;
-  padding:74px 0 115px;
+  padding:65px 0 145px;
 }
 
 .hero-copy{
-  max-width:650px;
+  max-width:680px;
 }
 
 .kicker{
   display:inline-flex;
-  border:1px solid rgba(245,184,46,.55);
-  background:rgba(7,26,43,.42);
+  align-items:center;
+  gap:7px;
+  border:1px solid rgba(245,184,46,.6);
+  background:rgba(7,26,43,.45);
   padding:8px 14px;
   border-radius:30px;
   color:#fff;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.3px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.4px;
 }
 
-.kicker span{
+.kicker b{
   color:var(--gold);
-  margin-right:7px;
 }
 
 h1{
-  font-size:clamp(48px,6vw,78px);
+  font-family:Georgia,serif;
+  font-size:clamp(48px,6.5vw,78px);
   line-height:.98;
   letter-spacing:-2.5px;
   margin:20px 0 22px;
-  font-weight:900;
 }
 
 h1 span{
@@ -264,7 +306,7 @@ h1 span{
 .hero-copy p{
   font-size:18px;
   color:#edf4f8;
-  max-width:650px;
+  max-width:630px;
   margin-bottom:28px;
 }
 
@@ -275,7 +317,36 @@ h1 span{
 }
 
 .hero-buttons .btn{
-  min-width:150px;
+  min-width:165px;
+}
+
+.hero-proof{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.proof{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.proof-icon{
+  font-size:23px;
+  color:var(--gold);
+}
+
+.proof b{
+  display:block;
+  font-size:13px;
+}
+
+.proof small{
+  display:block;
+  color:#c9d5de;
+  font-size:11px;
 }
 
 
@@ -290,69 +361,72 @@ h1 span{
   transform:translateX(-50%);
   width:min(1110px,92%);
 
-  background:rgba(7,26,43,.88);
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:17px;
+  background:rgba(7,26,43,.9);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:18px;
 
-  padding:20px 24px;
+  padding:19px 20px;
 
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:8px;
+
+  box-shadow:0 18px 40px rgba(0,0,0,.2);
 }
 
 .trust{
   display:flex;
-  gap:13px;
+  gap:12px;
   align-items:center;
-  padding:0 18px;
-  border-right:1px solid rgba(255,255,255,.17);
+  padding:0 17px;
+  border-right:1px solid rgba(255,255,255,.15);
 }
 
 .trust:last-child{
-  border-right:0;
+  border:0;
 }
 
 .trust-icon{
-  font-size:28px;
+  font-size:27px;
   color:var(--gold);
 }
 
 .trust b{
   display:block;
   color:#fff;
-  font-size:15px;
+  font-size:14px;
 }
 
 .trust small{
-  color:#d3dde5;
-  font-size:12px;
+  color:#cbd7df;
+  font-size:11px;
 }
 
 
 /* =========================
-   GENERAL SECTIONS
+   SECTIONS
 ========================= */
 
 section{
-  padding:72px 0;
+  padding:76px 0;
 }
 
 .section-head{
   text-align:center;
-  margin-bottom:34px;
+  margin-bottom:36px;
 }
 
-.section-head .eyebrow{
+.eyebrow{
   color:#c48b20;
-  font-size:14px;
+  font-size:12px;
   letter-spacing:3px;
-  font-weight:900;
+  font-weight:950;
   text-transform:uppercase;
 }
 
 .section-head h2{
-  font-size:38px;
+  font-family:Georgia,serif;
+  font-size:40px;
   line-height:1.1;
   margin:8px 0;
   color:var(--ink);
@@ -360,16 +434,18 @@ section{
 
 .section-head p{
   color:var(--muted);
-  font-size:16px;
+  font-size:15px;
 }
 
 .gold-line{
-  width:42px;
+  width:44px;
   height:3px;
   background:var(--gold);
-  margin:10px auto 0;
-  border-radius:4px;
+  margin:11px auto 0;
+  border-radius:5px;
 }
+
+
 /* =========================
    SERVICES
 ========================= */
@@ -381,14 +457,14 @@ section{
 .service-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  gap:18px;
 }
 
 .service-card{
   background:#fff;
-  border:1px solid #e5eaf0;
+  border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:30px 25px;
+  padding:28px 23px;
   box-shadow:var(--shadow);
   transition:.25s;
   position:relative;
@@ -398,9 +474,9 @@ section{
 .service-card:before{
   content:"";
   position:absolute;
-  top:0;
   left:0;
   right:0;
+  top:0;
   height:4px;
   background:var(--gold);
   transform:scaleX(0);
@@ -410,7 +486,7 @@ section{
 
 .service-card:hover{
   transform:translateY(-7px);
-  box-shadow:0 22px 48px rgba(7,26,43,.15);
+  box-shadow:0 25px 55px rgba(7,26,43,.16);
 }
 
 .service-card:hover:before{
@@ -422,20 +498,29 @@ section{
   height:58px;
   display:grid;
   place-items:center;
-  border-radius:16px;
+  border-radius:17px;
   background:#fff7df;
   font-size:29px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .service-card h3{
-  font-size:20px;
+  font-size:19px;
   margin-bottom:8px;
 }
 
 .service-card p{
   color:var(--muted);
-  font-size:14px;
+  font-size:13px;
+  min-height:62px;
+}
+
+.service-card a{
+  display:inline-flex;
+  margin-top:16px;
+  color:#c48b20;
+  font-size:13px;
+  font-weight:900;
 }
 
 
@@ -449,22 +534,22 @@ section{
 
 .destination-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  grid-template-columns:repeat(6,1fr);
+  gap:13px;
 }
 
 .destination{
-  height:390px;
+  height:260px;
   position:relative;
-  border-radius:24px;
+  border-radius:19px;
   overflow:hidden;
-  background:#172b3d center/cover no-repeat;
+  background:#19334a center/cover no-repeat;
   box-shadow:var(--shadow);
   transition:.25s;
 }
 
 .destination:hover{
-  transform:translateY(-7px);
+  transform:translateY(-6px);
 }
 
 .destination:after{
@@ -472,175 +557,268 @@ section{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(
-      to top,
-      rgba(2,10,18,.92),
-      rgba(2,10,18,.05) 65%
-    );
+  linear-gradient(
+    to top,
+    rgba(2,10,18,.9),
+    rgba(2,10,18,.04) 68%
+  );
 }
 
 .destination-content{
   position:absolute;
   z-index:2;
-  bottom:26px;
-  left:26px;
-  right:20px;
+  bottom:18px;
+  left:17px;
+  right:12px;
   color:#fff;
 }
 
-.destination-content .tag{
-  display:inline-block;
+.destination-content small{
   color:var(--gold);
-  font-size:11px;
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:1.4px;
-  margin-bottom:7px;
+  letter-spacing:1px;
+  font-size:9px;
 }
 
 .destination-content h3{
-  font-size:30px;
-  line-height:1.1;
-  margin-bottom:4px;
+  font-family:Georgia,serif;
+  font-size:22px;
+  margin-top:2px;
 }
 
 .destination-content p{
-  color:#e5edf3;
-  font-size:14px;
+  font-size:11px;
+  color:#dce6ed;
 }
 
 
 /* Destination images */
 
-.shimla{
+.manali{
   background-image:
-  url("https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85");
 }
 
-.manikaran{
+.shimla{
   background-image:
-  url("https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=85");
 }
 
 .dharamshala{
   background-image:
-  url("https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=85");
 }
 
 .amritsar{
   background-image:
-  url("https://images.unsplash.com/photo-1588094629810-3f6a4c4d0c2a?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1588094629810-3f6a4c4d0c2a?auto=format&fit=crop&w=800&q=85");
 }
 
 .mussoorie{
   background-image:
-  url("https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=800&q=85");
 }
 
 .chandigarh{
   background-image:
-  url("https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=85");
+  url("https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=85");
 }
 
 
 /* =========================
-   ABOUT / WHY US
+   WHY US
 ========================= */
 
-.about{
+.why{
   background:#fff;
 }
 
-.about-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:55px;
-  align-items:center;
-}
-
-.about-image{
-  min-height:470px;
-  border-radius:28px;
-  overflow:hidden;
-  position:relative;
-
+.why-box{
   background:
     linear-gradient(
-      135deg,
-      rgba(7,26,43,.18),
-      rgba(7,26,43,.65)
-    ),
-    url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1400&q=85")
-    center/cover;
+      120deg,
+      #071a2b,
+      #0c2b44
+    );
+
+  color:#fff;
+  border-radius:28px;
+  padding:44px;
+
+  display:grid;
+  grid-template-columns:1.05fr 1.95fr;
+  gap:38px;
+
+  box-shadow:var(--shadow);
 }
 
-.about-badge{
-  position:absolute;
-  left:25px;
-  bottom:25px;
-  background:#fff;
-  border-radius:16px;
-  padding:18px 22px;
-  box-shadow:0 12px 30px rgba(0,0,0,.18);
-}
-
-.about-badge strong{
-  display:block;
-  font-size:25px;
-  color:var(--navy);
-}
-
-.about-badge span{
-  color:var(--muted);
-  font-size:13px;
-}
-
-.about-copy .eyebrow{
-  color:#c48b20;
-  letter-spacing:2px;
-  font-size:13px;
-  font-weight:900;
-}
-
-.about-copy h2{
-  font-size:42px;
+.why-copy h2{
+  font-family:Georgia,serif;
+  font-size:39px;
   line-height:1.08;
-  margin:10px 0 18px;
+  margin:8px 0 14px;
 }
 
-.about-copy > p{
-  color:var(--muted);
-  margin-bottom:24px;
+.why-copy p{
+  color:#cbd7df;
+  font-size:14px;
 }
 
-.feature-list{
+.why-copy .btn{
+  margin-top:20px;
+}
+
+.features{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:14px;
+  gap:12px;
 }
 
 .feature{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  padding:15px;
-  border-radius:14px;
-  background:#f7f9fb;
+  padding:19px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:16px;
+  background:rgba(255,255,255,.04);
 }
 
 .feature-icon{
-  color:#c48b20;
-  font-size:20px;
+  font-size:25px;
+  color:var(--gold);
+  margin-bottom:8px;
 }
 
-.feature b{
+.feature h3{
+  font-size:15px;
+}
+
+.feature p{
+  font-size:12px;
+  color:#bfcbd4;
+  margin-top:3px;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking{
+  background:var(--soft);
+}
+
+.booking-box{
+  background:#fff;
+  border-radius:26px;
+  padding:36px;
+
+  box-shadow:var(--shadow);
+
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:30px;
+
+  align-items:center;
+}
+
+.booking-copy h2{
+  font-family:Georgia,serif;
+  font-size:38px;
+  line-height:1.08;
+}
+
+.booking-copy p{
+  color:var(--muted);
+  margin-top:12px;
+}
+
+.contact-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.contact-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:19px;
+
+  display:flex;
+  align-items:center;
+  gap:13px;
+
+  transition:.2s;
+}
+
+.contact-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(7,26,43,.08);
+}
+
+.contact-card .ico{
+  width:44px;
+  height:44px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:#fff7df;
+  font-size:21px;
+}
+
+.contact-card b{
   display:block;
   font-size:14px;
 }
 
-.feature span{
-  color:var(--muted);
+.contact-card span{
   font-size:12px;
+  color:var(--muted);
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews{
+  background:#fff;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.review{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:25px;
+
+  box-shadow:
+    0 10px 30px rgba(7,26,43,.06);
+}
+
+.stars{
+  color:#e5a91e;
+  letter-spacing:2px;
+  font-size:15px;
+}
+
+.review p{
+  margin:14px 0;
+  color:#425466;
+  font-size:14px;
+}
+
+.review strong{
+  font-size:13px;
+}
+
+.review small{
+  display:block;
+  color:var(--muted);
+  margin-top:2px;
 }
 
 
@@ -649,16 +827,16 @@ section{
 ========================= */
 
 .cta{
-  padding:80px 0;
+  padding:70px 0;
   color:#fff;
 
   background:
     linear-gradient(
-      110deg,
+      105deg,
       rgba(7,26,43,.97),
-      rgba(7,26,43,.82)
+      rgba(7,26,43,.8)
     ),
-    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85")
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85")
     center/cover;
 }
 
@@ -666,66 +844,23 @@ section{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:25px;
 }
 
 .cta h2{
+  font-family:Georgia,serif;
   font-size:42px;
-  line-height:1.05;
-  margin-bottom:10px;
 }
 
 .cta p{
-  color:#d9e4eb;
-  max-width:620px;
+  color:#cbd7df;
+  margin-top:5px;
 }
 
-.cta-actions{
+.cta-buttons{
   display:flex;
-  gap:12px;
-  flex-shrink:0;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-  background:var(--soft);
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.contact-card{
-  background:#fff;
-  border-radius:20px;
-  padding:28px;
-  border:1px solid #e4eaf0;
-  box-shadow:var(--shadow);
-}
-
-.contact-icon{
-  font-size:27px;
-  margin-bottom:13px;
-}
-
-.contact-card h3{
-  margin-bottom:5px;
-}
-
-.contact-card p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-.contact-card a{
-  color:#b77e0e;
-  font-weight:800;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
 
@@ -734,78 +869,88 @@ section{
 ========================= */
 
 footer{
-  background:#061725;
-  color:#fff;
-  padding:45px 0 90px;
+  background:#04121f;
+  color:#c7d3dc;
+  padding:48px 0 25px;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:45px;
+  grid-template-columns:1.3fr 1fr 1fr 1.1fr;
+  gap:35px;
 }
 
-footer h3{
+.footer-brand strong{
+  font-family:Georgia,serif;
   color:var(--gold);
+  font-size:21px;
+}
+
+.footer-brand p{
+  font-size:12px;
+  max-width:300px;
+  margin-top:10px;
+  color:#9fb0bc;
+}
+
+.footer h3{
+  color:#fff;
+  font-size:14px;
   margin-bottom:13px;
 }
 
-footer p,
-footer li{
-  color:#b8c7d2;
-  font-size:13px;
+.footer a,
+.footer li{
+  font-size:12px;
+  color:#aebdc8;
+  display:block;
+  margin:7px 0;
 }
 
-footer ul{
+.footer ul{
   list-style:none;
 }
 
-footer li{
-  margin:8px 0;
+.socials{
+  display:flex;
+  gap:8px;
+  margin-top:14px;
 }
 
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);
-  margin-top:35px;
-  padding-top:20px;
-  text-align:center;
-  color:#91a3b1;
-  font-size:12px;
+.socials a{
+  width:32px;
+  height:32px;
+
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  margin:0;
+  color:#fff;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.09);
+  margin-top:32px;
+  padding-top:18px;
+
+  font-size:11px;
+  color:#8293a0;
+
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
 }
 
 
 /* =========================
-   FLOATING MOBILE CTA
+   MOBILE BOTTOM BAR
 ========================= */
 
-.mobile-cta{
+.mobile-bottom{
   display:none;
-  position:fixed;
-  z-index:100;
-  bottom:0;
-  left:0;
-  right:0;
-  background:#fff;
-  padding:10px 12px;
-  box-shadow:0 -8px 25px rgba(0,0,0,.12);
-  gap:10px;
-}
-
-.mobile-cta a{
-  flex:1;
-  padding:14px 8px;
-  border-radius:10px;
-  text-align:center;
-  font-weight:900;
-  color:#fff;
-}
-
-.mobile-call{
-  background:var(--navy);
-}
-
-.mobile-whatsapp{
-  background:#20a457;
 }
 
 
@@ -813,9 +958,109 @@ footer li{
    RESPONSIVE
 ========================= */
 
-@media(max-width:950px){
+@media(max-width:1000px){
 
   .navlinks{
+    gap:15px;
+  }
+
+  .phone-mini{
+    display:none;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .destination-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .trustbar{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trust:nth-child(2){
+    border:0;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .booking-box{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-inner{
+    min-height:720px;
+  }
+
+}
+
+
+@media(max-width:760px){
+
+  .topbar{
+    display:none;
+  }
+
+  .nav{
+    height:70px;
+  }
+
+  .brand strong{
+    font-size:18px;
+  }
+
+  .brand small{
+    font-size:9px;
+  }
+
+  .logo{
+    width:47px;
+    height:47px;
+    font-size:24px;
+  }
+
+  .nav-cta{
+    display:none;
+  }
+
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+
+    background:#071a2b;
+
+    padding:12px 5% 20px;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:0;
+
+    box-shadow:0 20px 35px rgba(0,0,0,.25);
+  }
+
+  .navlinks.show{
+    display:flex;
+  }
+
+  .navlinks a{
+    width:100%;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .navlinks a.active:after{
     display:none;
   }
 
@@ -823,111 +1068,72 @@ footer li{
     display:block;
   }
 
-  .nav-actions .btn{
-    display:none;
+
+  .hero{
+    min-height:700px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3,15,25,.95),
+        rgba(3,15,25,.55)
+      ),
+      url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85")
+      center/cover;
   }
 
-  .service-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .destination-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-image{
-    min-height:380px;
-  }
-
-  .cta-box{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-
-@media(max-width:650px){
-
-  section{
-    padding:58px 0;
-  }
-
-  .nav{
-    height:70px;
-  }
-
-  .logo{
-    width:45px;
-    height:45px;
-    font-size:22px;
-  }
-
-  .brand strong{
-    font-size:19px;
-  }
-
-  .brand small{
-    display:none;
-  }
-
-  .hero,
   .hero-inner{
     min-height:700px;
+    padding:55px 0 190px;
+    align-items:flex-start;
   }
 
-  .hero-inner{
-    align-items:flex-start;
-    padding-top:85px;
+  .hero-copy{
+    padding-top:25px;
+  }
+
+  .kicker{
+    font-size:10px;
   }
 
   h1{
-    font-size:47px;
+    font-size:49px;
     letter-spacing:-1.8px;
   }
 
   .hero-copy p{
-    font-size:16px;
+    font-size:15px;
   }
 
   .hero-buttons{
-    flex-direction:column;
+    display:grid;
+    grid-template-columns:1fr 1fr;
   }
 
   .hero-buttons .btn{
-    width:100%;
+    min-width:0;
+    padding:13px 8px;
+  }
+
+  .hero-proof{
+    gap:12px;
+  }
+
+  .proof{
+    flex:1;
+    min-width:120px;
   }
 
   .trustbar{
-    position:absolute;
-    bottom:18px;
-    grid-template-columns:1fr 1fr;
+    bottom:15px;
     padding:12px;
-    gap:0;
+    grid-template-columns:1fr 1fr;
+    border-radius:15px;
   }
 
   .trust{
-    padding:13px 9px;
-    border-right:1px solid rgba(255,255,255,.15);
-  }
-
-  .trust:nth-child(2){
-    border-right:0;
-  }
-
-  .trust:nth-child(-n+2){
-    border-bottom:1px solid rgba(255,255,255,.15);
+    padding:9px;
+    border:0;
   }
 
   .trust-icon{
@@ -939,78 +1145,250 @@ footer li{
   }
 
   .trust small{
-    font-size:10px;
+    font-size:9px;
   }
 
-  .service-grid,
-  .destination-grid{
-    grid-template-columns:1fr;
-  }
-
-  .destination{
-    height:360px;
+  section{
+    padding:58px 0;
   }
 
   .section-head h2{
-    font-size:32px;
+    font-size:31px;
   }
 
-  .about-copy h2{
-    font-size:34px;
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+    gap:11px;
   }
 
-  .feature-list{
-    grid-template-columns:1fr;
+  .service-card{
+    padding:20px 15px;
+    border-radius:17px;
   }
 
-  .cta h2{
-    font-size:34px;
+  .service-icon{
+    width:48px;
+    height:48px;
+    font-size:23px;
   }
 
-  .cta-actions{
-    width:100%;
-    flex-direction:column;
+  .service-card h3{
+    font-size:16px;
   }
 
-  .cta-actions .btn{
-    width:100%;
+  .service-card p{
+    font-size:11px;
+    min-height:78px;
   }
 
-  .footer-grid{
+  .destination-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .destination{
+    height:230px;
+  }
+
+  .why-box{
+    padding:28px 20px;
     grid-template-columns:1fr;
     gap:25px;
   }
 
-  .mobile-cta{
-    display:flex;
+  .why-copy h2{
+    font-size:31px;
   }
 
-  footer{
-    padding-bottom:100px;
+  .features{
+    grid-template-columns:1fr 1fr;
   }
+
+  .feature{
+    padding:14px;
+  }
+
+  .booking-box{
+    padding:24px 18px;
+  }
+
+  .booking-copy h2{
+    font-size:31px;
+  }
+
+  .contact-cards{
+    grid-template-columns:1fr;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .review:nth-child(n+2){
+    display:none;
+  }
+
+  .cta-box{
+    display:block;
+  }
+
+  .cta h2{
+    font-size:33px;
+  }
+
+  .cta-buttons{
+    margin-top:20px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+  }
+
+  .copyright{
+    display:block;
+  }
+
+  .copyright span{
+    display:block;
+    margin-top:6px;
+  }
+
+  .mobile-bottom{
+    position:fixed;
+    z-index:120;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:#fff;
+
+    padding:9px 10px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+
+    box-shadow:0 -10px 30px rgba(0,0,0,.13);
+  }
+
+  .mobile-bottom a{
+    border-radius:13px;
+    padding:13px;
+    text-align:center;
+    font-weight:900;
+    font-size:14px;
+  }
+
+  .mobile-call{
+    background:var(--navy);
+    color:#fff;
+  }
+
+  .mobile-wa{
+    background:var(--green);
+    color:#fff;
+  }
+
+  body{
+    padding-bottom:68px;
+  }
+
+}
+
+
+@media(max-width:420px){
+
+  .brand small{
+    display:none;
+  }
+
+  .hero-buttons{
+    grid-template-columns:1fr;
+  }
+
+  .hero-proof{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .destination-grid{
+    gap:9px;
+  }
+
+  .destination{
+    height:205px;
+  }
+
+  .destination-content h3{
+    font-size:19px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
 }
 
 </style>
-</style>
 </head>
+
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<div class="container">
+
+<div class="top-items">
+
+<span>🛡️ <b>Safe & Reliable</b></span>
+
+<span>◷ <b>24/7 Support</b></span>
+
+<span>₹ <b>Transparent Pricing</b></span>
+
+</div>
+
+<div>
+We're Available 24x7 ·
+<span class="gold">+91 93286 56258</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- HEADER -->
 
 <header>
 
 <div class="container nav">
 
-<a href="#home" class="brand">
+<a class="brand" href="#home">
 
-<div class="logo">🏔️</div>
+<div class="logo">
+🏔️
+</div>
 
 <div>
+
 <strong>Yadav Tour & Travels</strong>
-<small>Travel with Comfort & Trust</small>
+
+<small>Your Journey, Our Responsibility</small>
+
 </div>
 
 </a>
@@ -1020,34 +1398,37 @@ footer li{
 
 <a class="active" href="#home">Home</a>
 
-<a href="#services">Services</a>
-
-<a href="#destinations">Destinations</a>
-
 <a href="#about">About Us</a>
 
-<a href="#contact">Contact Us</a>
+<a href="#services">Services</a>
+
+<a href="#destinations">Tours</a>
+
+<a href="#why">Why Us</a>
+
+<a href="#contact">Contact</a>
 
 </nav>
 
 
-<div class="nav-actions">
+<div class="nav-cta">
 
-<a class="call-mini"
-href="tel:+919328656258">
-☎
-</a>
+<span class="phone-mini">
+☎ +91 93286 56258
+</span>
 
-<a class="btn btn-gold"
+<a
+class="btn btn-gold"
 href="tel:+919328656258">
-Call Now
+📞 Book Now
 </a>
 
 </div>
 
 
-<button class="mobile-menu"
-onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">
+<button
+class="mobile-menu"
+onclick="document.querySelector('.navlinks').classList.toggle('show')">
 ☰
 </button>
 
@@ -1057,9 +1438,7 @@ onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <main id="home">
 
@@ -1069,25 +1448,30 @@ onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">
 
 <div class="hero-copy">
 
+
 <div class="kicker">
-<span>✦</span>
-YOUR JOURNEY, OUR RESPONSIBILITY
+
+<b>✦</b>
+
+TRUSTED TRAVEL PARTNER FROM CHANDIGARH
+
 </div>
 
 
 <h1>
 
-Every Journey,<br>
+Every Journey,
 
-<span>made Perfect.</span>
+<br>
+
+<span>Made Perfect.</span>
 
 </h1>
 
 
 <p>
 
-Reliable taxi, travel and tour services from Chandigarh for local journeys,
-airport transfers, one-way and round trips across North India and nearby states.
+Reliable taxi, airport transfer and tour services from Chandigarh for local journeys, airport transfers, one-way and round trips across North India.
 
 </p>
 
@@ -1098,106 +1482,137 @@ airport transfers, one-way and round trips across North India and nearby states.
 class="btn btn-gold"
 href="tel:+919328656258">
 
-☎ &nbsp; Call Now
+☎ Call Now
 
 </a>
 
 
 <a
-class="btn btn-outline"
+class="btn btn-green"
 href="https://wa.me/919328656258"
-target="_blank">
+target="_blank"
+rel="noopener">
 
-◉ &nbsp; WhatsApp
+◉ WhatsApp
 
 </a>
 
 </div>
 
+
+<div class="hero-proof">
+
+
+<div class="proof">
+
+<span class="proof-icon">🛡️</span>
+
+<div>
+
+<b>Safe & Reliable</b>
+
+<small>Comfort-first service</small>
+
+</div>
+
+</div>
+
+
+<div class="proof">
+
+<span class="proof-icon">👨‍✈️</span>
+
+<div>
+
+<b>Professional Drivers</b>
+
+<small>Experienced & courteous</small>
+
 </div>
 
 </div>
 
 
+<div class="proof">
 
-<!-- TRUST BAR -->
+<span class="proof-icon">₹</span>
+
+<div>
+
+<b>Clear Pricing</b>
+
+<small>No surprises</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
 
 <div class="trustbar">
 
 
 <div class="trust">
 
-<div class="trust-icon">
-🛡
-</div>
+<span class="trust-icon">✈️</span>
 
 <div>
 
-<b>Safe & Reliable</b>
+<b>Airport Transfers</b>
 
-<small>
-Your journey matters
-</small>
+<small>Pickup & drop service</small>
 
 </div>
 
 </div>
-
 
 
 <div class="trust">
 
-<div class="trust-icon">
-♙
-</div>
+<span class="trust-icon">🚕</span>
 
 <div>
 
-<b>Experienced Service</b>
+<b>Outstation Trips</b>
 
-<small>
-Courteous & punctual
-</small>
+<small>One-way & round trips</small>
 
 </div>
 
 </div>
-
 
 
 <div class="trust">
 
-<div class="trust-icon">
-◷
-</div>
+<span class="trust-icon">📍</span>
 
 <div>
 
-<b>24/7 Enquiries</b>
+<b>Local Taxi</b>
 
-<small>
-Available for assistance
-</small>
+<small>Chandigarh & Tricity</small>
 
 </div>
 
 </div>
-
 
 
 <div class="trust">
 
-<div class="trust-icon">
-✦
-</div>
+<span class="trust-icon">🏔️</span>
 
 <div>
 
-<b>Fair Pricing</b>
+<b>North India Tours</b>
 
-<small>
-Quality service
-</small>
+<small>Hills, cities & more</small>
 
 </div>
 
@@ -1210,9 +1625,7 @@ Quality service
 
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- SERVICES -->
 
 <section
 class="services"
@@ -1224,18 +1637,18 @@ id="services">
 <div class="section-head">
 
 <div class="eyebrow">
-COMFORTABLE TRAVEL FOR EVERY NEED
+Our Services
 </div>
 
 <h2>
-Our Services
+Comfortable Rides. Memorable Journeys.
 </h2>
 
-<div class="gold-line"></div>
-
 <p>
-Simple, dependable travel arrangements from Chandigarh and beyond.
+Simple booking, dependable service and a journey planned around you.
 </p>
+
+<div class="gold-line"></div>
 
 </div>
 
@@ -1243,29 +1656,6 @@ Simple, dependable travel arrangements from Chandigarh and beyond.
 
 <div class="service-grid">
 
-
-<!-- LOCAL TAXI -->
-
-<article class="service-card">
-
-<div class="service-icon">
-🚕
-</div>
-
-<h3>
-Local Taxi
-</h3>
-
-<p>
-Convenient travel across Chandigarh,
-Mohali and Panchkula for everyday journeys.
-</p>
-
-</article>
-
-
-
-<!-- AIRPORT -->
 
 <article class="service-card">
 
@@ -1278,36 +1668,60 @@ Airport Transfers
 </h3>
 
 <p>
-Timely pickup and drop-off arrangements
-to and from airports.
+Reliable pickup and drop to Chandigarh, Delhi, Amritsar and other major airports.
 </p>
+
+<a href="tel:+919328656258">
+Book Transfer →
+</a>
 
 </article>
 
 
-
-<!-- OUTSTATION -->
 
 <article class="service-card">
 
 <div class="service-icon">
-🛣️
+🚕
 </div>
 
 <h3>
-Outstation Taxi
+Outstation Trips
 </h3>
 
 <p>
-One-way and round-trip travel across
-North India and nearby states.
+One-way, round-trip and multi-day journeys across Punjab, Himachal, Haryana and Uttarakhand.
 </p>
+
+<a href="tel:+919328656258">
+Plan Your Trip →
+</a>
 
 </article>
 
 
 
-<!-- TOURS -->
+<article class="service-card">
+
+<div class="service-icon">
+📍
+</div>
+
+<h3>
+Local Taxi Service
+</h3>
+
+<p>
+Convenient rides around Chandigarh, Mohali, Panchkula and nearby areas.
+</p>
+
+<a href="tel:+919328656258">
+Call for Taxi →
+</a>
+
+</article>
+
+
 
 <article class="service-card">
 
@@ -1320,9 +1734,17 @@ Tour Packages
 </h3>
 
 <p>
-Flexible travel plans for beautiful
-destinations and memorable trips.
+Flexible travel plans for families, couples, groups and weekend getaways.
 </p>
+
+<a
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
+
+Explore Tours →
+
+</a>
 
 </article>
 
@@ -1335,9 +1757,7 @@ destinations and memorable trips.
 
 
 
-<!-- =========================
-     DESTINATIONS
-========================= -->
+<!-- DESTINATIONS -->
 
 <section
 class="destinations"
@@ -1349,18 +1769,18 @@ id="destinations">
 <div class="section-head">
 
 <div class="eyebrow">
-DISCOVER THE BEAUTY OF INCREDIBLE PLACES
+Popular Destinations
 </div>
 
 <h2>
-Popular Destinations
+Explore North India With Us
 </h2>
 
-<div class="gold-line"></div>
-
 <p>
-Explore popular North Indian destinations from Chandigarh.
+From peaceful hill stations to vibrant heritage cities.
 </p>
+
+<div class="gold-line"></div>
 
 </div>
 
@@ -1369,357 +1789,279 @@ Explore popular North Indian destinations from Chandigarh.
 <div class="destination-grid">
 
 
-<!-- SHIMLA -->
-
-<article class="destination shimla">
-
-<div class="destination-content">
-
-<div class="tag">
-HIMACHAL PRADESH
-</div>
-
-<h3>
-Shimla
-</h3>
-
-<p>
-The Queen of Hills
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MANALI -->
-
-<article class="destination manikaran">
+<a
+class="destination manali"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
 
 <div class="destination-content">
 
-<div class="tag">
-HIMACHAL PRADESH
-</div>
+<small>
+Adventure & Snow
+</small>
 
 <h3>
 Manali
 </h3>
 
 <p>
-Adventure & Serenity
+Mountains · Valleys · Adventure
 </p>
 
 </div>
 
-</article>
+</a>
 
 
 
-<!-- DHARAMSHALA -->
-
-<article class="destination dharamshala">
+<a
+class="destination shimla"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
 
 <div class="destination-content">
 
-<div class="tag">
-HIMACHAL PRADESH
+<small>
+Queen of Hills
+</small>
+
+<h3>
+Shimla
+</h3>
+
+<p>
+Views · Heritage · Relaxation
+</p>
+
 </div>
+
+</a>
+
+
+
+<a
+class="destination dharamshala"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
+
+<div class="destination-content">
+
+<small>
+Peace & Spirituality
+</small>
 
 <h3>
 Dharamshala
 </h3>
 
 <p>
-Spiritual & Peaceful
+Mountains · Monasteries · Nature
 </p>
 
 </div>
 
-</article>
+</a>
 
 
 
-<!-- AMRITSAR -->
-
-<article class="destination amritsar">
+<a
+class="destination amritsar"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
 
 <div class="destination-content">
 
-<div class="tag">
-PUNJAB
-</div>
+<small>
+Spirit & Culture
+</small>
 
 <h3>
 Amritsar
 </h3>
 
 <p>
-Divine & Historical
+Heritage · Food · Golden Temple
 </p>
 
 </div>
 
-</article>
+</a>
 
 
 
-<!-- MUSSOORIE -->
-
-<article class="destination mussoorie">
+<a
+class="destination mussoorie"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
 
 <div class="destination-content">
 
-<div class="tag">
-UTTARAKHAND
-</div>
+<small>
+Serene & Calm
+</small>
 
 <h3>
 Mussoorie
 </h3>
 
 <p>
-The Queen of the Hills
+Hills · Views · Getaways
 </p>
 
 </div>
 
-</article>
+</a>
 
 
 
-<!-- CHANDIGARH -->
-
-<article class="destination chandigarh">
+<a
+class="destination chandigarh"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
 
 <div class="destination-content">
 
-<div class="tag">
-CHANDIGARH
-</div>
+<small>
+Local & Nearby
+</small>
 
 <h3>
 Chandigarh
 </h3>
 
 <p>
-Local & City Travel
+Local rides · Tricity · Airport
 </p>
 
 </div>
 
-</article>
+</a>
 
 
 </div>
-
 
 </div>
 
 </section>
-<!-- =========================
-     ABOUT US
-========================= -->
+
+
+
+<!-- WHY US -->
 
 <section
-class="about"
-id="about">
+class="why"
+id="why">
 
 <div class="container">
 
-<div class="about-grid">
+
+<div class="why-box">
 
 
-<div class="about-image">
-
-<div class="about-badge">
-
-<strong>24/7</strong>
-
-<span>
-Available for enquiries
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="about-copy">
+<div class="why-copy">
 
 <div class="eyebrow">
-WHY TRAVEL WITH US
+Why Choose Us
 </div>
 
 <h2>
-Travel with Comfort & Trust
+Your Comfort Is Our Commitment.
 </h2>
 
 <p>
-
-At Yadav Tour & Travels, we believe every journey should be
-comfortable, dependable and stress-free.
-
-From a quick local trip to a long-distance journey across
-North India, we're here to help you travel with confidence.
-
+We believe good travel is more than reaching a destination. It is about safety, comfort, clear communication and peace of mind throughout the journey.
 </p>
-
-
-<div class="feature-list">
-
-
-<div class="feature">
-
-<div class="feature-icon">
-✓
-</div>
-
-<div>
-
-<b>
-Reliable Service
-</b>
-
-<span>
-Focused on a smooth travel experience.
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<div class="feature-icon">
-✓
-</div>
-
-<div>
-
-<b>
-Experienced Assistance
-</b>
-
-<span>
-Helpful support before and during your journey.
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<div class="feature-icon">
-✓
-</div>
-
-<div>
-
-<b>
-North India Coverage
-</b>
-
-<span>
-Chandigarh and nearby states.
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="feature">
-
-<div class="feature-icon">
-✓
-</div>
-
-<div>
-
-<b>
-Easy Booking
-</b>
-
-<span>
-Call or WhatsApp us to get started.
-</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CALL TO ACTION
-========================= -->
-
-<section
-class="cta">
-
-<div class="container">
-
-<div class="cta-box">
-
-
-<div>
-
-<h2>
-Ready to Plan Your Journey?
-</h2>
-
-<p>
-
-Tell us where you're going and when you're travelling.
-We'll help you arrange your journey from Chandigarh.
-
-</p>
-
-</div>
-
-
-<div class="cta-actions">
 
 <a
 class="btn btn-gold"
 href="tel:+919328656258">
 
-☎ &nbsp; Call Now
-
-</a>
-
-
-<a
-class="btn btn-green"
-href="https://wa.me/919328656258"
-target="_blank">
-
-◉ &nbsp; WhatsApp
+Talk to Us
 
 </a>
 
 </div>
 
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🛡️
+</div>
+
+<h3>
+Safe & Comfortable
+</h3>
+
+<p>
+We put your comfort and peace of mind first.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+👨‍✈️
+</div>
+
+<h3>
+Experienced Drivers
+</h3>
+
+<p>
+Professional, courteous and responsible service.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+₹
+</div>
+
+<h3>
+Transparent Pricing
+</h3>
+
+<p>
+Clear fares with no confusing surprises.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+◷
+</div>
+
+<h3>
+24/7 Support
+</h3>
+
+<p>
+We're available whenever your journey needs us.
+</p>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -1729,13 +2071,147 @@ target="_blank">
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- BOOKING -->
 
 <section
-class="contact"
-id="contact">
+class="booking"
+id="about">
+
+<div class="container">
+
+
+<div class="booking-box">
+
+
+<div class="booking-copy">
+
+<div class="eyebrow">
+Easy Booking
+</div>
+
+<h2>
+Ready when you are.
+</h2>
+
+<p>
+Tell us where you're going, when you're travelling and what you need. We'll help you plan the ride.
+</p>
+
+</div>
+
+
+
+<div class="contact-cards">
+
+
+<a
+class="contact-card"
+href="tel:+919328656258">
+
+<div class="ico">
+☎
+</div>
+
+<div>
+
+<b>
+Call Now
+</b>
+
+<span>
++91 93286 56258
+</span>
+
+</div>
+
+</a>
+
+
+
+<a
+class="contact-card"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
+
+<div class="ico">
+◉
+</div>
+
+<div>
+
+<b>
+WhatsApp
+</b>
+
+<span>
+Chat with us instantly
+</span>
+
+</div>
+
+</a>
+
+
+
+<a
+class="contact-card"
+href="mailto:yadavtravelschd@gmail.com">
+
+<div class="ico">
+✉
+</div>
+
+<div>
+
+<b>
+Email
+</b>
+
+<span>
+yadavtravelschd@gmail.com
+</span>
+
+</div>
+
+</a>
+
+
+
+<div class="contact-card">
+
+<div class="ico">
+📍
+</div>
+
+<div>
+
+<b>
+Based in Chandigarh
+</b>
+
+<span>
+Serving North India
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
 
 <div class="container">
 
@@ -1743,102 +2219,89 @@ id="contact">
 <div class="section-head">
 
 <div class="eyebrow">
-LET'S START YOUR JOURNEY
+Customer Experience
 </div>
 
 <h2>
-Contact Yadav Tour & Travels
+Happy Customers, Happy Journeys
 </h2>
+
+<p>
+What matters most is how you feel when you reach your destination.
+</p>
 
 <div class="gold-line"></div>
 
-<p>
-We're just a call or message away.
-</p>
-
 </div>
 
 
 
-<div class="contact-grid">
+<div class="review-grid">
 
 
-<!-- PHONE -->
+<article class="review">
 
-<div class="contact-card">
-
-<div class="contact-icon">
-📞
+<div class="stars">
+★★★★★
 </div>
-
-<h3>
-Call Us
-</h3>
 
 <p>
-
-<a href="tel:+919328656258">
-+91 93286 56258
-</a>
-
+“Excellent service. The driver was punctual, polite and the journey was very comfortable.”
 </p>
 
+<strong>
+— Rajeev S.
+</strong>
+
+<small>
+Chandigarh
+</small>
+
+</article>
+
+
+
+<article class="review">
+
+<div class="stars">
+★★★★★
 </div>
-
-
-
-<!-- WHATSAPP -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-💬
-</div>
-
-<h3>
-WhatsApp
-</h3>
 
 <p>
-
-<a
-href="https://wa.me/919328656258"
-target="_blank">
-
-Message us on WhatsApp
-
-</a>
-
+“Everything was professionally managed and communication was easy throughout the trip.”
 </p>
 
+<strong>
+— Neha V.
+</strong>
+
+<small>
+Panchkula
+</small>
+
+</article>
+
+
+
+<article class="review">
+
+<div class="stars">
+★★★★★
 </div>
-
-
-
-<!-- EMAIL -->
-
-<div class="contact-card">
-
-<div class="contact-icon">
-✉️
-</div>
-
-<h3>
-Email
-</h3>
 
 <p>
-
-<a
-href="mailto:yadavtravels.chd@gmail.com">
-
-yadavtravels.chd@gmail.com
-
-</a>
-
+“Very reliable for airport transfers. Smooth booking and excellent service in the Tricity.”
 </p>
 
-</div>
+<strong>
+— Amit S.
+</strong>
+
+<small>
+Mohali
+</small>
+
+</article>
 
 
 </div>
@@ -1846,9 +2309,64 @@ yadavtravels.chd@gmail.com
 </div>
 
 </section>
-<!-- =========================
-     FOOTER
-========================= -->
+
+
+
+<!-- CTA -->
+
+<section
+class="cta"
+id="contact">
+
+<div class="container cta-box">
+
+
+<div>
+
+<h2>
+Ready to Travel?
+</h2>
+
+<p>
+Book your ride and enjoy a comfortable, hassle-free journey.
+</p>
+
+</div>
+
+
+<div class="cta-buttons">
+
+<a
+class="btn btn-gold"
+href="tel:+919328656258">
+
+☎ +91 93286 56258
+
+</a>
+
+
+<a
+class="btn btn-green"
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
+
+◉ Chat on WhatsApp
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -1858,18 +2376,52 @@ yadavtravels.chd@gmail.com
 <div class="footer-grid">
 
 
+<div class="footer-brand">
+
+<div class="brand">
+
+<div class="logo">
+🏔️
+</div>
+
 <div>
 
-<h3>
+<strong>
 Yadav Tour & Travels
-</h3>
+</strong>
+
+<small>
+Your Journey, Our Responsibility
+</small>
+
+</div>
+
+</div>
+
 
 <p>
-
-Reliable taxi, travel and tour services from Chandigarh
-across North India and nearby states.
-
+Reliable taxi, airport transfer, outstation and tour services from Chandigarh across North India.
 </p>
+
+
+<div class="socials">
+
+<a
+href="https://wa.me/919328656258"
+target="_blank"
+rel="noopener">
+◉
+</a>
+
+<a href="tel:+919328656258">
+☎
+</a>
+
+<a href="mailto:yadavtravelschd@gmail.com">
+✉
+</a>
+
+</div>
 
 </div>
 
@@ -1883,25 +2435,15 @@ Quick Links
 
 <ul>
 
-<li>
-<a href="#home">Home</a>
-</li>
+<li><a href="#home">Home</a></li>
 
-<li>
-<a href="#services">Services</a>
-</li>
+<li><a href="#about">About Us</a></li>
 
-<li>
-<a href="#destinations">Destinations</a>
-</li>
+<li><a href="#services">Services</a></li>
 
-<li>
-<a href="#about">About Us</a>
-</li>
+<li><a href="#destinations">Tours</a></li>
 
-<li>
-<a href="#contact">Contact Us</a>
-</li>
+<li><a href="#contact">Contact</a></li>
 
 </ul>
 
@@ -1917,13 +2459,35 @@ Our Services
 
 <ul>
 
-<li>✓ Local Taxi</li>
+<li>Airport Transfers</li>
 
-<li>✓ Airport Transfers</li>
+<li>Outstation Trips</li>
 
-<li>✓ Outstation Taxi</li>
+<li>Local Taxi Service</li>
 
-<li>✓ Tour Packages</li>
+<li>Tour Packages</li>
+
+</ul>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Contact Us
+</h3>
+
+<ul>
+
+<li>☎ +91 93286 56258</li>
+
+<li>✉ yadavtravelschd@gmail.com</li>
+
+<li>📍 Chandigarh, India</li>
+
+<li>◷ Available 24x7</li>
 
 </ul>
 
@@ -1933,10 +2497,16 @@ Our Services
 </div>
 
 
-<div class="footer-bottom">
 
-© 2026 Yadav Tour & Travels.
-All Rights Reserved.
+<div class="copyright">
+
+<span>
+© 2026 Yadav Tour & Travels. All rights reserved.
+</span>
+
+<span>
+Chandigarh · Tricity · North India
+</span>
 
 </div>
 
@@ -1947,11 +2517,9 @@ All Rights Reserved.
 
 
 
-<!-- =========================
-     MOBILE CALL / WHATSAPP
-========================= -->
+<!-- MOBILE CALL / WHATSAPP -->
 
-<div class="mobile-cta">
+<div class="mobile-bottom">
 
 <a
 class="mobile-call"
@@ -1963,9 +2531,10 @@ href="tel:+919328656258">
 
 
 <a
-class="mobile-whatsapp"
+class="mobile-wa"
 href="https://wa.me/919328656258"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 ◉ WhatsApp
 
@@ -1975,10 +2544,6 @@ target="_blank">
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
 const menu =
@@ -1987,77 +2552,25 @@ document.querySelector(".mobile-menu");
 const nav =
 document.querySelector(".navlinks");
 
+menu.addEventListener("click",function(){
 
-menu.addEventListener("click", function(){
-
-nav.classList.toggle("mobile-open");
+nav.classList.toggle("show");
 
 });
 
-
-document
-.querySelectorAll(".navlinks a")
+document.querySelectorAll(".navlinks a")
 .forEach(function(link){
 
 link.addEventListener("click",function(){
 
-nav.classList.remove("mobile-open");
+nav.classList.remove("show");
 
 });
 
 });
-
 
 </script>
 
 
-<style>
-
-/* Mobile navigation */
-
-@media(max-width:950px){
-
-.navlinks.mobile-open{
-
-display:flex;
-
-position:absolute;
-
-top:70px;
-
-left:0;
-
-right:0;
-
-background:#071a2b;
-
-padding:15px 5% 20px;
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:0;
-
-box-shadow:0 12px 25px rgba(0,0,0,.25);
-
-}
-
-.navlinks.mobile-open a{
-
-padding:12px 0;
-
-width:100%;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-}
-
-</style>
-
 </body>
-
 </html>
-<!-- update -->
