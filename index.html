@@ -3162,7 +3162,24 @@ document.querySelectorAll(
   el.style.webkitTapHighlightColor="transparent";
 
 });
+// WHATSAPP BOOKING
+document.querySelectorAll('a[href*="whatsapp"], a[href*="wa.me"], .whatsapp, .btn_whatsapp').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
 
+    const message =
+      "Hello Yadav Tour & Travels! 👋%0A%0A" +
+      "I would like to enquire about a booking.%0A%0A" +
+      "📍 Pickup Location: %0A" +
+      "📍 Destination: %0A" +
+      "📅 Travel Date: %0A" +
+      "🔄 One-way / Round Trip: %0A" +
+      "👥 Passengers: %0A%0A" +
+      "Please share the best fare and availability.";
+
+    window.open("https://wa.me/919328656258?text=" + message, "_blank");
+  });
+});
 </script>
 </body>
 </html>
