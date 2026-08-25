@@ -2905,7 +2905,159 @@ button[aria-label*="Menu"]{
   }
 
 }
+/* ================= PREMIUM FINISH ================= */
 
+.btn,
+.service-card,
+.destination,
+.feature,
+.review-main,
+.review-side,
+.hero-card{
+  will-change:transform;
+}
+
+/* Premium button interaction */
+.btn{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,255,255,.28),
+    transparent
+  );
+  transform:skewX(-20deg);
+  transition:.65s ease;
+  pointer-events:none;
+}
+
+.btn:hover::after{
+  left:140%;
+}
+
+.btn:active{
+  transform:scale(.97);
+}
+
+/* Premium destination cards */
+.destination{
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease;
+}
+
+.destination::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    135deg,
+    rgba(245,200,91,.12),
+    transparent 45%
+  );
+  opacity:0;
+  transition:.45s ease;
+  pointer-events:none;
+}
+
+.destination:hover{
+  transform:translateY(-9px) scale(1.012);
+  box-shadow:
+    0 25px 60px rgba(7,24,39,.20),
+    0 0 0 1px rgba(217,166,42,.18);
+}
+
+.destination:hover::after{
+  opacity:1;
+}
+
+/* Image zoom */
+.destination{
+  background-size:cover;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease,
+    background-size .8s ease;
+}
+
+.destination:hover{
+  background-size:106%;
+}
+
+/* Premium service cards */
+.service-card{
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.service-card:hover{
+  border-color:rgba(217,166,42,.35);
+}
+
+/* Gold icon glow */
+.service-icon{
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.service-card:hover .service-icon{
+  transform:translateY(-3px) rotate(-2deg);
+  box-shadow:0 10px 25px rgba(217,166,42,.16);
+}
+
+/* Header premium depth */
+header{
+  box-shadow:0 8px 30px rgba(0,0,0,.10);
+}
+
+/* Gold underline animation */
+.goldline{
+  position:relative;
+  overflow:hidden;
+}
+
+.goldline::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#fff;
+  transform:translateX(-110%);
+  animation:goldSweep 3.5s ease-in-out infinite;
+}
+
+@keyframes goldSweep{
+  0%,55%{
+    transform:translateX(-110%);
+  }
+  75%,100%{
+    transform:translateX(110%);
+  }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
 </style>
 
 
